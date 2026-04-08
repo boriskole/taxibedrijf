@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">taxibedrijf</string>
+    <string name="kenteken_input_placeholder">Voer kenteken in..</string>
+    <string name="kenteken_submit_button">Zoeken</string>
 </resources>
