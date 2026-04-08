@@ -1,11 +1,10 @@
 package nl.adacademie.taxibedrijf
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import nl.adacademie.taxibedrijf.fragment.CarDetailsResultFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,9 +21,17 @@ class MainActivity : AppCompatActivity() {
         submitButton.setOnClickListener {
 
             if (licensePlateTextField.text.isNotBlank()) {
-                val intent = Intent(this, CardDetailsActivity::class.java)
-                intent.putExtra("kenteken", licensePlateTextField.text.toString())
-                startActivity(intent)
+                // Fragment aanmaken.
+                val fragment = CarDetailsResultFragment().apply {
+                    arguments = Bundle().apply {
+                        putString("kenteken", licensePlateTextField.text.toString())
+                    }
+                }
+
+                // Fragment plaatsen op scherm.
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fcw_car_details_fragment, fragment)
+                    .commit()
             }
 
         }

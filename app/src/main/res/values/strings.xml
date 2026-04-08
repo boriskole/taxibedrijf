@@ -2,4 +2,5 @@
     <string name="app_name">taxibedrijf</string>
     <string name="kenteken_input_placeholder">Voer kenteken in..</string>
     <string name="kenteken_submit_button">Zoeken</string>
+    <string name="kenteken_result_text">Kenteken: %1$s</string>
 </resources>
