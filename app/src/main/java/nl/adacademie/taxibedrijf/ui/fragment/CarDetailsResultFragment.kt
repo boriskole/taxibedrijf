@@ -1,4 +1,4 @@
-package nl.adacademie.taxibedrijf.fragment
+package nl.adacademie.taxibedrijf.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
