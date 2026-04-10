@@ -1,11 +1,14 @@
 package nl.adacademie.taxibedrijf.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
@@ -54,8 +57,15 @@ class MainActivity : AppCompatActivity() {
                     android.R.layout.simple_list_item_1,
                     cars
                 )
+
                 // Adapter instellen binnen de list view.
-                findViewById<ListView>(R.id.lv_cars).adapter = arrayAdapter
+                val listView = findViewById<ListView>(R.id.lv_cars)
+                listView.adapter = arrayAdapter
+                listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+                    val intent = Intent(applicationContext, CarDetailsActivity::class.java)
+                    intent.putExtra("car", cars[position])
+                    startActivity(intent)
+                }
             },
             { error -> println(error) }
         )

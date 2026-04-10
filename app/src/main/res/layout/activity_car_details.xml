@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CarDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_car_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_heading"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_kenteken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_kenteken" />
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_merk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_merk" />
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_voertuigsoort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_voertuigsoort" />
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_kleur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_kleur" />
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_aantal_zitplaatsen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_aantal_zitplaatsen" />
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_aantal_cilinders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_aantal_cilinders" />
+
+        <TextView
+            android:id="@+id/tv_car_details_screen_cilinder_inhoud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_details_cilinderinhoud" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
